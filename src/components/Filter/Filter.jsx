@@ -1,5 +1,5 @@
 import { useDispatch } from 'react-redux';
-import { filteredConcacts } from 'redux/actions';
+import { filteredConcacts } from 'redux/filterSlice';
 import css from './Filter.module.css';
 
 export const Filter = ({ value, onChange }) => {
