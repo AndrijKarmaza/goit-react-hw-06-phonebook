@@ -1,10 +1,11 @@
 import { useSelector, useDispatch } from 'react-redux';
 import { deleteContact } from 'redux/contactsSlice';
 import css from './ContactList.module.css';
+import { getContacst, getFilterValue } from 'redux/selectors';
 
 export const ContactList = () => {
-  const contacts = useSelector(state => state.contacts);
-  const filter = useSelector(state => state.filter);
+  const contacts = useSelector(getContacst);
+  const filter = useSelector(getFilterValue);
   const dispatch = useDispatch();
 
   const normalisedFilter = filter.toLowerCase();
